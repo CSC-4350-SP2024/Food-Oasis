@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Food Oasis</title>
+    <header>
+        <div class="dropdown-menu" id="userDropdown">
+            <button class="menu" onclick="toggleDropdown()"> Menu </button>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="index.html">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Find Food</a>
+                <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </header>
+</head>
+
+<body>
+    <section id="home" class="home">
+        <div class="content">
+            <h2>Company Name</h2>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13266.44646200743!2d-84.3874304!3d33.7707008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1706747903651!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="details">
+                <div class="rating-hours">
+                    <p>Rating: 4.5</p>
+                    <p>Hours: 9am - 5pm</p>
+                </div>
+                <div class="product-types">
+                    <h3>Product Types:</h3>
+                    <ul>
+                        <li>Fruits</li>
+                        <li>Vegetables</li>
+                        <li>Meat</li>
+                        <li>Turkey</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        //open dropdown
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownContent");
+            dropdown.classList.toggle("show");
+        }
+
+        // Close the dropdown
+        window.onclick = function (event) {
+            if (!event.target.matches('.menu')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
