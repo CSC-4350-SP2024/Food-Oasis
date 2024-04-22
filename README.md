@@ -1,2 +1,0 @@
-# FoodOasis
-Food Oasis
